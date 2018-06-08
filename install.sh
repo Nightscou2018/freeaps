@@ -10,4 +10,14 @@ if [ -d  .xDripAPS ]; then
     echo "xDripAPS.py"
     cp freeaps/scripts/xDripAPS/xDripAPS.py .xDripAPS
 fi
+
+echo "Rebuilding oref0..."
+cd /root/src/oref0
+if git branch | grep "* master"; then
+	npm install -g oref0
+else
+	npm run global-install
+fi
+
 echo "All done!"
+
