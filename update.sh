@@ -4,11 +4,8 @@ echo "Installing FreeAPS extensions..."
 
 echo "Updating oref0..."
 cd ~/src/oref0 &&
-if git branch | grep "* master"; then
-    git checkout master && git stash && git pull
-else
-    git checkout dev && git stash && git pull
-fi
+git stash
+git pull
 git stash drop
 
 cd /root &&
