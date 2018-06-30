@@ -4,9 +4,8 @@ echo "Installing FreeAPS extensions..."
 
 echo "Updating oref0..."
 cd ~/src/oref0 &&
-git stash
+git reset --hard HEAD
 git pull
-git stash drop
 
 cd /root &&
 echo "Patching files..."
